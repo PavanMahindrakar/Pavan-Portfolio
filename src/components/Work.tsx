@@ -5,6 +5,21 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
+    title: "BrightSEO AI",
+    category: "Agentic AI SEO Intelligence SaaS",
+    tools: "Next.js, Convex, OpenAI GPT-4o-mini, Bright Data, Clerk",
+    image: "/images/BrightSEOAI.jpeg",
+    link: "https://github.com/PavanMahindrakar/AI-powered-seo-saas",
+    live: "https://ai-powered-seo-saas.vercel.app",
+  },
+  {
+    title: "Smart Office Assistant",
+    category: "Enterprise AI Automation",
+    tools: "Python, LangChain, Pinecone, AWS Bedrock, PostgreSQL",
+    image: "/images/SmartOffice.png",
+    link: "https://github.com/PavanMahindrakar/smart-office-assistant",
+  },
+  {
     title: "AskMyDocs",
     category: "AI Document Q&A Application (RAG/LLM)",
     tools: "Python, LangChain, FAISS, Ollama, Streamlit",
@@ -32,13 +47,7 @@ const projects = [
     image: "/images/HireSense.png",
     link:"https://github.com/PavanMahindrakar/ai-resume-analysis-platform",
   },
-  {
-    title: "Smart Office Assistant",
-    category: "Enterprise AI Automation",
-    tools: "Python, LangChain, Pinecone, AWS Bedrock, PostgreSQL",
-    image: "/images/SmartOffice.png",
-    link: "https://github.com/PavanMahindrakar/smart-office-assistant",
-  },
+  
 ];
 
 const Work = () => {
@@ -116,6 +125,18 @@ const Work = () => {
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
+                        </div>
+                        <div className="carousel-links">
+                          {project.live && (
+                            <a href={project.live} target="_blank" rel="noreferrer">
+                              Live Product
+                            </a>
+                          )}
+                          {project.link && (
+                            <a href={project.link} target="_blank" rel="noreferrer">
+                              Source Code
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
